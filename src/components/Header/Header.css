@@ -1,0 +1,77 @@
+.header {
+    height: 32vw;
+    width: 100%;
+    background: url('/header_img.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    border-top-left-radius: 10vw;
+
+}
+
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 5s;
+
+}
+
+.header-contents h2 {
+    font-weight: 400;
+    color: rgb(225, 67, 10);
+    font-size: max(2.5vw, 5px);
+}
+
+.header-contents p {
+    color: rgb(243, 90, 35);
+    font-size: 1.5vw;
+}
+
+.header-contents button {
+    background: transparent;
+    font-weight:500;
+    padding: 0.7vw;
+    color: rgba(236, 106, 13, 0.936);
+    border: 1px solid;
+    border-radius: 50px;
+    font-size:max(1.5vw,14px);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width:1050) {
+    .header {
+        height: 38vw;
+    }
+    .header-contents {
+        max-width: 45%;
+    }
+}
+
+@media (max-width:750px) {
+    .header-contents {
+        max-width: 55%;
+    }
+    .header-contents p {
+        display: none;
+    }
+    .header-contents button {
+        padding: 2vw 4vw;
+        font-size:max(1vw,11px);
+    }
+}
